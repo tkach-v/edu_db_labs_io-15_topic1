@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Система організації та управління опитуваннями експертів</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/edu_db_labs_io-15_topic1/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="description" content="Лабораторні роботи з дисципліни &quot;Організація баз даних&quot;">
+    
+    <link rel="preload" href="/edu_db_labs_io-15_topic1/assets/css/0.styles.1aac174a.css" as="style"><link rel="preload" href="/edu_db_labs_io-15_topic1/assets/js/app.6b2a1679.js" as="script"><link rel="preload" href="/edu_db_labs_io-15_topic1/assets/js/2.b846dfa6.js" as="script"><link rel="preload" href="/edu_db_labs_io-15_topic1/assets/js/25.bbb0c378.js" as="script"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/10.eb16c742.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/11.3ef95339.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/12.21fae77a.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/13.8978cdf0.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/14.82b0bc53.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/15.65813135.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/16.10c6304d.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/17.fecc531e.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/18.99656196.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/19.73d95e54.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/20.5a9f28a4.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/21.295b39b6.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/22.1cca73bd.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/23.d18b12a1.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/24.57cc5001.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/26.b1b09b4c.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/27.18dee7fc.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/28.2845a563.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/3.a3e5ab8b.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/4.88f26a93.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/5.7bbcf190.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/6.aaabfb21.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/7.1dbca0e9.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/8.1dc9239d.js"><link rel="prefetch" href="/edu_db_labs_io-15_topic1/assets/js/9.06a604d1.js">
+    <link rel="stylesheet" href="/edu_db_labs_io-15_topic1/assets/css/0.styles.1aac174a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/edu_db_labs_io-15_topic1/" class="home-link router-link-active"><!----> <span class="site-name">Система організації та управління опитуваннями експертів</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/edu_db_labs_io-15_topic1/" class="nav-link">
+  Початок
+</a></div> <a href="https://github.com/tkach-v/edu_db_labs_io-15_topic1" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/edu_db_labs_io-15_topic1/" class="nav-link">
+  Початок
+</a></div> <a href="https://github.com/tkach-v/edu_db_labs_io-15_topic1" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/edu_db_labs_io-15_topic1/intro/" class="sidebar-link">Вступ</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/edu_db_labs_io-15_topic1/requirements/" class="sidebar-heading clickable"><span>Розроблення загальних вимог до системи</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/edu_db_labs_io-15_topic1/use%20cases/" class="sidebar-link">Розроблення вимог до функціональности системи</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/edu_db_labs_io-15_topic1/use%20cases/#_1-діаграма-прецедентів" class="sidebar-link">1. Діаграма прецедентів</a></li><li class="sidebar-sub-header"><a href="/edu_db_labs_io-15_topic1/use%20cases/#_2-схеми-використання-для-клієнта" class="sidebar-link">2. Схеми використання для Клієнта</a></li><li class="sidebar-sub-header"><a href="/edu_db_labs_io-15_topic1/use%20cases/#_3-схеми-використання-для-експерта" class="sidebar-link">3. Схеми використання для Експерта</a></li><li class="sidebar-sub-header"><a href="/edu_db_labs_io-15_topic1/use%20cases/#_4-схеми-використання-для-користувача" class="sidebar-link">4. Схеми використання для Користувача</a></li><li class="sidebar-sub-header"><a href="/edu_db_labs_io-15_topic1/use%20cases/#_5-сценаріі" class="sidebar-link">5. Сценарії</a></li></ul></li><li><a href="/edu_db_labs_io-15_topic1/design/" class="sidebar-link">Проектування інформаційного забезпечення</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/edu_db_labs_io-15_topic1/design/#модель-бізнес-об-єктів" class="sidebar-link">Модель бізнес-об'єктів</a></li><li class="sidebar-sub-header"><a href="/edu_db_labs_io-15_topic1/design/#er-модель" class="sidebar-link">ER-модель</a></li><li class="sidebar-sub-header"><a href="/edu_db_labs_io-15_topic1/design/#реляціина-схема" class="sidebar-link">Реляційна схема</a></li></ul></li><li><a href="/edu_db_labs_io-15_topic1/software/" aria-current="page" class="sidebar-link">Реалізація інформаційного та програмного забезпечення</a></li><li><a href="/edu_db_labs_io-15_topic1/test/" class="sidebar-link">Тестування працездатності системи</a></li><li><a href="/edu_db_labs_io-15_topic1/conclusion/" class="sidebar-link">Висновки</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><div class="language- extra-class"><pre class="language-text"><code>-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Хост: 127.0.0.1
+-- Время создания: Май 17 2023 г., 11:09
+-- Версия сервера: 10.4.27-MariaDB
+-- Версия PHP: 8.2.0
+
+SET SQL_MODE = &quot;NO_AUTO_VALUE_ON_ZERO&quot;;
+START TRANSACTION;
+SET time_zone = &quot;+00:00&quot;;
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `mydb`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `question`
+--
+
+CREATE TABLE `question` (
+  `id` int(11) NOT NULL,
+  `quiz_id` int(11) NOT NULL,
+  `question` varchar(40) NOT NULL,
+  `answer_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Дамп данных таблицы `question`
+--
+
+INSERT INTO `question` (`id`, `quiz_id`, `question`, `answer_id`) VALUES
+(1, 1, 'Що таке похідна?', 14),
+(2, 1, 'Що таке інтеграл?', 15),
+(3, 2, 'Як створити Базу даних?', 1),
+(4, 2, 'Як вивести таблицю?', 3),
+(5, 3, 'Для чого потрібен регістр EAX?', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `quiz`
+--
+
+CREATE TABLE `quiz` (
+  `id` int(11) NOT NULL,
+  `title` varchar(45) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `datetime` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Дамп данных таблицы `quiz`
+--
+
+INSERT INTO `quiz` (`id`, `title`, `description`, `datetime`) VALUES
+(1, 'Тест2 ВМ', 'Другий тест з курсу вищої математики. На виконання дається одна спроба. Час проходження: 1 год.', '2023-05-31'),
+(2, 'Екзамен ОБД', 'Екзамен с курсу Огранізація баз даних. На виконання екзамену відведено 2год. Після екзамену обовязково скинути скріншот викладачу', '2023-05-31'),
+(3, 'МКР СП', 'Модульна контрольна робота з системного програмування. Запитання по темам з лекції 1-10.', '2023-06-24');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `username` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `password`, `username`) VALUES
+(1, 'example@example.com', '123456789', 'tiger'),
+(2, 'test@gmail.com', 'S4tHJ72', 'bear'),
+(3, 'fiot@lll.kpi.ua', 'Hf!7ls97/%', 'lion');
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `question`
+--
+ALTER TABLE `question`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `quiz`
+--
+ALTER TABLE `quiz`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `quiz`
+--
+ALTER TABLE `quiz`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Останнє оновлення:</span> <span class="time">5/17/2023, 11:05:38 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/edu_db_labs_io-15_topic1/assets/js/app.6b2a1679.js" defer></script><script src="/edu_db_labs_io-15_topic1/assets/js/2.b846dfa6.js" defer></script><script src="/edu_db_labs_io-15_topic1/assets/js/25.bbb0c378.js" defer></script>
+  </body>
+</html>
