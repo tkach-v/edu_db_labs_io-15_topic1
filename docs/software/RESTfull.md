@@ -1,3 +1,4 @@
+```
 <?php
 
 require '../vendor/autoload.php';
@@ -218,3 +219,4 @@ $app->delete('/src/quiz/{quiz_id}', [$quizController, 'deleteQuiz']);
 $app->get('/src/questions/{quiz_id}', [$questionController, 'getQuestionsByQuiz']);
 
 $app->run();
+```
